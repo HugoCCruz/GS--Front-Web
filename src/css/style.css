@@ -1,0 +1,132 @@
+/* Estilos principais */
+
+:root {
+  /* Cores primárias dos requisitos */
+  --primary-dark: #0d364c;
+  --primary-light: #d7c4ce;
+  --accent-light: #1eafcf;
+  --accent-medium: #3789ac;
+  
+  /* Paleta de cores estendida */
+  --primary-darker: #092435;
+  --primary-lightest: #f0ebee;
+  --accent-dark: #126b7c;
+  --accent-lighter: #8fd4e6;
+  
+  /* Neutros */
+  --neutral-white: #ffffff;
+  --neutral-light: #f5f5f7;
+  --neutral-medium: #e0e0e5;
+  --neutral-dark: #333340;
+  --neutral-black: #121214;
+  
+  /* Cores funcionais */
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --error: #e74c3c;
+  
+  /* Tipografia */
+  --font-family: 'Montserrat', sans-serif;
+  
+  /* Espaçamento baseado em sistema de 8px */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+  
+  /* Bordas arredondadas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Variações de tema */
+body.theme-dark {
+  --neutral-white: #1a1a1a;
+  --neutral-light: #2d2d2d;
+  --neutral-medium: #404040;
+  --neutral-dark: #e0e0e0;
+  --neutral-black: #ffffff;
+  --primary-lightest: #2d2d2d;
+}
+
+body.theme-light {
+  --primary-dark: #87ceeb;
+  --accent-medium: #add8e6;
+  --accent-light: #b0e0e6;
+  --neutral-light: #f8f9fa;
+}
+
+/* Estilos base */
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--neutral-dark);
+  background-color: var(--neutral-white);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color var(--transition-medium), color var(--transition-medium);
+}
+/* Estilos do cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(13, 54, 76, 0.95);
+  padding: var(--space-sm) 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-medium);
+}
+
+.header .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: var(--neutral-white);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Troca de tema */
+.theme-switcher {
+  display: flex;
+  gap: var(--space-xs);
+  margin-right: var(--space-md);
+}
+
+.theme-btn {
+  background: none;
+  border: 2px solid var(--accent-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-btn:hover,
+.theme-btn.active {
+  background-color: var(--accent-light);
+  transform: scale(1.1);
+}
