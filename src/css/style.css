@@ -130,3 +130,69 @@ body {
   background-color: var(--accent-light);
   transform: scale(1.1);
 }
+
+ain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+.section {
+  padding: var(--space-xxl) 0;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-xl);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-medium));
+  color: var(--neutral-white);
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
