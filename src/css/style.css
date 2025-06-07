@@ -479,3 +479,93 @@ body {
   font-size: 3rem;
   margin-bottom: var(--space-md);
 }
+
+/* Estilos do slideshow */
+.slideshow {
+  background-color: var(--primary-dark);
+  color: var(--neutral-white);
+}
+
+.slideshow .section-title {
+  color: var(--neutral-white);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  color: var(--neutral-white);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--neutral-white);
+  border: none;
+  padding: var(--space-sm);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.slide-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slide-btn.prev {
+  left: var(--space-sm);
+}
+
+.slide-btn.next {
+  right: var(--space-sm);
+}
+
+.slide-indicators {
+  text-align: center;
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 var(--space-xs);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.indicator.active {
+  background: var(--neutral-white);
+}

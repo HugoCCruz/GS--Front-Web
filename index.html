@@ -251,6 +251,44 @@
         </div>
       </div>
     </section>
+    <!-- Seção de Galeria (Slideshow) -->
+    <section id="slideshow" class="section slideshow">
+      <div class="container">
+        <h2 class="section-title">Nossa Tecnologia em Ação</h2>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg" alt="Sistema de monitoramento">
+            <div class="slide-content">
+              <h3>Monitoramento Inteligente</h3>
+              <p>Sensores avançados monitoram constantemente as condições climáticas</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg" alt="Automação Arduino">
+            <div class="slide-content">
+              <h3>Automação com Arduino</h3>
+              <p>Tecnologia Arduino para resposta automática e eficiente</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg" alt="Aplicativo móvel">
+            <div class="slide-content">
+              <h3>Controle via App</h3>
+              <p>Interface intuitiva para monitoramento em tempo real</p>
+            </div>
+          </div>
+          
+          <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
+          <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
+          
+          <div class="slide-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
     
   </main>
 </body>
