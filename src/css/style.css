@@ -653,3 +653,69 @@ body {
   font-size: 1.2rem;
   margin-bottom: var(--space-lg);
 }
+
+/* Estilos de contato */
+.contact-content {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-details {
+  margin-top: var(--space-lg);
+}
+
+.contact-details p {
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: var(--neutral-light);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border: 2px solid var(--neutral-medium);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-light);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--error);
+}
+
+.error-message {
+  display: block;
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-top: var(--space-xs);
+}

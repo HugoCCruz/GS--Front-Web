@@ -321,7 +321,45 @@
         </div>
       </div>
     </section>
-    
+    <!-- Seção de Contato -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Fale Conosco</h3>
+            <p>Interessado em proteger seu lar? Entre em contato para saber mais sobre nossa solução.</p>
+            <div class="contact-details">
+              <p>📧 contato@aqua.com.br</p>
+              <p>📞 (11) 4002-8922</p>
+              <p>📍 São Paulo, SP</p>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Nome *</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
