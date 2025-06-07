@@ -289,6 +289,38 @@
         </div>
       </div>
     </section>
+    <!-- Seção Quiz -->
+    <section id="quiz" class="section quiz">
+      <div class="container">
+        <h2 class="section-title">Quiz: Teste Seus Conhecimentos</h2>
+        <div class="quiz-container">
+          <div id="quiz-start" class="quiz-start">
+            <p>Teste seus conhecimentos sobre proteção contra alagamentos!</p>
+            <button onclick="startQuiz()" class="btn-primary">Iniciar Quiz</button>
+          </div>
+          
+          <div id="quiz-questions" class="quiz-questions" style="display: none;">
+            <div class="question-counter">
+              <span id="current-question">1</span> de <span id="total-questions">10</span>
+            </div>
+            <div class="question-container">
+              <h3 id="question-text"></h3>
+              <div class="answers" id="answers"></div>
+              <button id="next-btn" onclick="nextQuestion()" class="btn-primary" style="display: none;">Próxima</button>
+            </div>
+          </div>
+          
+          <div id="quiz-result" class="quiz-result" style="display: none;">
+            <h3>Resultado do Quiz</h3>
+            <div class="result-score">
+              <span id="final-score"></span>
+            </div>
+            <div class="result-message" id="result-message"></div>
+            <button onclick="restartQuiz()" class="btn-primary">Refazer Quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
     
   </main>
 </body>
