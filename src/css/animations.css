@@ -1,0 +1,197 @@
+/* Estilos de animação */
+
+/* Animação de ripple para efeito de água */
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(30, 175, 207, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 2s infinite;
+}
+
+/* Animação de onda para movimento de água */
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(5%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Animação de flutuação para elementos */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animação de transição de gradiente */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-shift {
+  background: linear-gradient(270deg, var(--accent-medium), var(--accent-light), var(--primary-dark));
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Animação de fade in para efeitos ao rolar a página */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação de pulsação para chamar atenção */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 175, 207, 0.7);
+  }
+  
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(30, 175, 207, 0);
+  }
+  
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 175, 207, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Animação de gota d'água */
+@keyframes waterDrop {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.water-drop {
+  animation: waterDrop 3s ease infinite;
+}
+
+/* Animação de chuva para efeitos de fundo */
+@keyframes rain {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: var(--accent-light);
+  opacity: 0;
+  top: -20px;
+  animation: rain 1.5s linear infinite;
+}
+
+/* Aplicar a elementos específicos */
+.hero-image .wave-animation {
+  animation: wave 15s linear infinite;
+}
+
+.tech-card:hover {
+  animation: pulse 2s infinite;
+}
+
+.step-number {
+  animation: waterDrop 3s ease infinite;
+}
+
+.benefit-icon, .impact-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-icon::before, .impact-icon::before {
+  animation: float 4s ease-in-out infinite;
+}
+
+.cta {
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
